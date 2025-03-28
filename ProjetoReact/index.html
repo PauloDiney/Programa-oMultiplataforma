@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Projeto</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo de nivel 1</h1>
+    <p class="paragrafo">Este é um paragrafo</p>
+    <ul class="itens">
+        <li class="itens">Item 1</li>
+        <li class="itens">Item 2</li>
+        <li class="itens">Item 3</li>
+    </ul>
+    <button type="button" id="btn">Clique aqui!</button>
+    <script>
+        function processarPagina(){
+            const titulo = document.getElementById('titulo');
+            const paragrafo = document.querySelector(".paragrafo");
+            const itens = document.querySelector('.itens');
+
+
+
+            if(titulo.innerHTML === "Titulo de nivel 1" ){
+                titulo.innerHTML = "Titulo de nivel 2";
+                itens.style.color = 'red';
+            } else {
+                titulo.innerHTML = "Titulo de nivel 1";
+                itens.style.color = 'black';
+            }
+        }
+        document.getElementById('btn').addEventListener('click', processarPagina);
+        
+    </script>
+</body>
+</html>
