@@ -1,0 +1,155 @@
+/* Container principal */
+.tarefas {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* Menu de navegação */
+  .tarefas-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tarefas-menu button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tarefas-menu button:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+  }
+  
+  /* Seções */
+  .section {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .section.criar,
+  .section.consultar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Formulário */
+  .tarefas_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tarefas_form input,
+  .tarefas_form textarea,
+  .tarefas_form select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    transition: border-color 0.3s;
+  }
+  
+  .tarefas_form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tarefas_form input:focus,
+  .tarefas_form textarea:focus {
+    border-color: #ff9800;
+    outline: none;
+  }
+  
+  .tarefas_form button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .tarefas_form button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  /* Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  table th {
+    background-color: #ff9800;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table tr:hover td {
+    background-color: #f0f0f0;
+  }
+  
+  table button {
+    padding: 0.7rem 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: .5rem;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  table button:hover {
+    background-color: #e68900;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .tarefas {
+      padding: 1rem;
+    }
+  
+    table th,
+    table td {
+      padding: 0.6rem;
+    }
+  
+    .tarefas_form input,
+    .tarefas_form textarea {
+      padding: 0.6rem;
+    }
+  }
+  

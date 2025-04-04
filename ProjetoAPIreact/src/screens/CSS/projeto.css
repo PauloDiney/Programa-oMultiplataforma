@@ -1,0 +1,189 @@
+/* Container principal */
+.projetos {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Menu de navegação dos projetos */
+.projetos-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.projetos-menu button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projetos-menu button:hover {
+    background-color: #004999;
+    transform: translateY(-2px);
+}
+
+	
+
+/* Seções do formulário e tabela */
+.section {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.section.criar,
+.section.consultar {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Formulário */
+.projetos_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projetos_form input,
+.projetos_form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: none;
+    transition: border-color 0.3s;
+}
+
+.projetos_form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.projetos_form input:focus,
+.projetos_form textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+}
+
+.projetos_form button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.projetos_form button:hover {
+    background-color: #004999;
+    transform: scale(1.05);
+}
+
+/* Tabela de projetos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background-color: #0066cc;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+table td {
+    padding: 1rem;
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover td {
+    background-color: #f0f0f0;
+}
+
+table button {
+    padding: 0.7rem 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: .5rem;
+    border: none;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+table button:hover {
+    background-color: #004999;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+          width: 100%;
+        }
+      
+        thead {
+          display: none;
+        }
+      
+        tr {
+          margin-bottom: 1rem;
+          background-color: white;
+          padding: 1rem;
+          border-radius: 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+      
+        td {
+          padding: 0.5rem 0.5rem;
+          margin-bottom: 2rem;
+          text-align: left;
+          position: relative;
+          padding-left: 50%;
+        }
+      
+        td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 1rem;
+          top: -1rem;
+          font-weight: bold;
+          color: #333;
+          white-space: nowrap;
+        }
+      
+        table button {
+          margin-top: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+}
