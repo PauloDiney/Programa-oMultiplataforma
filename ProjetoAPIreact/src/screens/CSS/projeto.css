@@ -60,38 +60,45 @@
 }
 
 .projetos_form input,
-.projetos_form textarea {
-    padding: 0.8rem;
+.projetos_form textarea,
+.projetos_form select {
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
     resize: none;
-    transition: border-color 0.3s;
+    transition: .1s ease-in-out;
 }
+
+
 
 .projetos_form label {
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
 }
 
 .projetos_form input:focus,
-.projetos_form textarea:focus {
+.projetos_form textarea:focus
+.projetos_form select:focus {
     border-color: #0066cc;
-    outline: none;
+    border: none;
+    outline: 2px solid #0066cc;
+    
 }
 
 .projetos_form button {
-    padding: 0.7rem 1.2rem;
+    padding: 1rem 1.2rem;
     border: none;
     background-color: #0066cc;
     color: white;
-    border-radius: 8px;
+    border-radius: 2px;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .projetos_form button:hover {
     background-color: #004999;
-    transform: scale(1.05);
 }
 
 /* Tabela de projetos */
